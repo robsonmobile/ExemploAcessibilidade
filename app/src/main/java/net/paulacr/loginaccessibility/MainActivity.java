@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrowView arrowView = (ArrowView) findViewById(R.id.arrow);
         arrowView.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_HOVER_ENTER);
-        
+
 
         if(accessibilityManager.isEnabled()) {
 
