@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 
 /**
- * Created by paularosa on 6/26/16.
+ * Exemplo extraído de http://stackoverflow.com/questions/24723040/how-to-create-a-right-facing-arrow-using-xml-shapes-in-android
  */
 public class ArrowView extends View {
 
@@ -94,20 +94,8 @@ public class ArrowView extends View {
     }
 
     @Override
-    public void onPopulateAccessibilityEvent(AccessibilityEvent event) {
-        super.onPopulateAccessibilityEvent(event);
-
-        if(event.getEventType() == AccessibilityEvent.TYPE_VIEW_ACCESSIBILITY_FOCUSED) {
-            event.getText().add("acessibilidade evento gerado");
-        }
-    }
-
-    @Override
     public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
-        if(event.getEventType() == AccessibilityEvent.TYPE_VIEW_ACCESSIBILITY_FOCUSED) {
-            event.getText().add("acessibilidade evento gerado");
-        }
-
-        return super.dispatchPopulateAccessibilityEvent(event);
+        event.getText().add("texto de acessibilidade");
+        return true;
     }
 }

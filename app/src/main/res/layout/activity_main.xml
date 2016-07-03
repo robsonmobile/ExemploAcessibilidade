@@ -17,13 +17,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <net.paulacr.loginaccessibility.customview.ArrowView
-        android:id="@+id/arrow"
-        android:layout_height="50dp"
-        android:layout_width="50dp"
-        android:contentDescription="teste custom view"
-        />
-
     <android.support.design.widget.TextInputLayout
         android:id="@+id/usernameInputLayout"
         android:layout_width="match_parent"
@@ -72,7 +65,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/facebookicon"/>
+            android:src="@drawable/facebookicon"
+            />
 
         <ImageView
             android:id="@+id/twitter"
@@ -100,6 +94,13 @@
         android:text="Conectar"
         />
 
+    <TextView
+        android:id="@+id/texto_confirma_acao_botao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="texto escondido"
+        android:visibility="invisible"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,15 +125,6 @@
 
     </LinearLayout>
 
-    <net.paulacr.loginaccessibility.customview.LovelyView
-        android:id="@+id/lovelyview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        custom:leftLabel="Left Label"
-        custom:rigthLabel="Right label"
-        android:layout_margin="20dp"
-        />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -141,8 +133,14 @@
         android:src="@android:drawable/btn_star"
         android:contentDescription="botao favoritar aplicativo"/>
 
-
-
-
+    <!-- remover este comentário se quiser testar acessibilidade
+    com custom view
+    <net.paulacr.loginaccessibility.customview.ArrowView
+        android:id="@+id/arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:focusable="true"
+        android:layout_marginBottom="500dp"
+        /> -->
 
 </LinearLayout>
